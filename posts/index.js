@@ -8,6 +8,8 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+const LOG_PREFIX = '[POSTS]';
+
 const posts = {};
 
 app.get("/posts", (req, res) => {
@@ -35,11 +37,11 @@ app.post("/posts", async (req, res) => {
 });
 
 app.post("/events", (req, res) => {
-  console.log("Received Event", req.body.type);
+  console.log(LOG_PREFIX, "Received Event", req.body.type);
 
   res.send({});
 });
 
 app.listen(4000, () => {
-  console.log("Listening on 4000");
+  console.log(LOG_PREFIX, "Listening on 4000");
 });
