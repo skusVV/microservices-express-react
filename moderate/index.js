@@ -15,7 +15,7 @@ app.post("/events", async(req, res) => {
     if (type === 'CommentCreated') {
         const commentStatus = data.content.includes(BANNED_WORD) ? 'rejected' : 'approved';
 
-        await axios.post("http://localhost:4005/events", {
+        await axios.post("http://event-bus-srv:4005/events", {
             type: "CommentModerated",
             data: {
                 // Do not use spread operator intentionally to see comment structure
