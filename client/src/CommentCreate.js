@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React, { useState } from 'react';
+import axios from 'axios';
 
 const CommentCreate = ({ postId }) => {
-  const [content, setContent] = useState("");
+  const [content, setContent] = useState('');
 
   const onSubmit = async (event) => {
     event.preventDefault();

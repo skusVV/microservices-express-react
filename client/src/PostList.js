@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import CommentCreate from "./CommentCreate";
-import CommentList from "./CommentList";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import CommentCreate from './CommentCreate';
+import CommentList from './CommentList';
 
 const PostList = () => {
   const [posts, setPosts] = useState({});
